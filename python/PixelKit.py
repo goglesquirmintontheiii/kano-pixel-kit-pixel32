@@ -19,7 +19,7 @@ JOYSTICK_RIGHT_PIN = 25
 JOYSTICK_CLICK_PIN = 27
 BUTTON_B_PIN = 18
 BUTTON_A_PIN = 23
-BUTTON_NONE_PIN = 5 # dunno what is this
+BUTTON_RESET = 5 # Button on the back of the board
 
 # Hardware instances
 # Objects representing the available hardware on the PixelKit
@@ -33,7 +33,7 @@ joystick_right = Pin(JOYSTICK_RIGHT_PIN, Pin.IN)
 joystick_click = Pin(JOYSTICK_CLICK_PIN, Pin.IN)
 button_a = Pin(BUTTON_A_PIN, Pin.IN)
 button_b = Pin(BUTTON_B_PIN, Pin.IN)
-# button_none = Pin(BUTTON_NONE_PIN, Pin.IN)
+button_reset = Pin(BUTTON_NONE_PIN, Pin.IN)
 dial = ADC(Pin(DIAL_PIN))
 dial.atten(ADC.ATTN_11DB)
 
