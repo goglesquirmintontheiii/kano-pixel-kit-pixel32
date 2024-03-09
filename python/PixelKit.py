@@ -20,6 +20,7 @@ JOYSTICK_CLICK_PIN = 27
 BUTTON_B_PIN = 18
 BUTTON_A_PIN = 23
 BUTTON_RESET = 5 # Button on the back of the board
+MICROPHONE_PIN = 39 
 
 # Hardware instances
 # Objects representing the available hardware on the PixelKit
@@ -34,12 +35,17 @@ joystick_click = Pin(JOYSTICK_CLICK_PIN, Pin.IN)
 button_a = Pin(BUTTON_A_PIN, Pin.IN)
 button_b = Pin(BUTTON_B_PIN, Pin.IN)
 button_reset = Pin(BUTTON_NONE_PIN, Pin.IN)
+
 dial = ADC(Pin(DIAL_PIN))
 dial.atten(ADC.ATTN_11DB)
+
+microphone = ADC(Pin(MICROPHONE_PIN))
+microphone.atten(ADC.ATTN_6DB) #May need to be 11DB
 
 # Hardware values
 # Values based on the available hardware
 dial_value = dial.read()
+microphone_value = microphone.read()
 is_pressing_up = False
 is_pressing_down = False
 is_pressing_left = False
